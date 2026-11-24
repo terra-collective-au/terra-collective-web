@@ -12,7 +12,7 @@ Todo está en un solo archivo: `js/data.js`. Ahí se reemplazan las marcas que d
 
 - `[PRICE]` y `[SIZE]`: precio y talla de cada prenda.
 - `[BRAND]`: la marca del top tejido.
-- `[TIME]`: la hora del showroom del 5 de diciembre.
+- `[TIME]`: la hora del showroom del 12 de diciembre.
 
 ## Importante sobre las fotos
 
@@ -21,5 +21,5 @@ Las fotos de la modelo y de las prendas son de muestra, generadas con IA. Cuando
 ## Lo que todavía es de muestra
 
 - La bolsa de compra y los favoritos funcionan solo en pantalla: no hay pago todavía.
-- El formulario de newsletter no guarda correos: falta conectarlo a una herramienta de correo.
+- El newsletter está escondido (`index.html`, sección NEWSLETTER) hasta conectarlo a una herramienta de correo: antes decía "you're on the list" sin guardar nada.
 - Los botones "Apply to consign" y "Read the consignment policies" todavía no llevan a ningún lado: falta el link al formulario y a las políticas.
