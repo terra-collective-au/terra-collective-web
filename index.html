@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Terra Collective · Curated consignment in Adelaide</title>
+  <meta name="description" content="Pre-loved pieces from Adelaide wardrobes, checked one by one. Shop the rack, try it on, or consign with us.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header" id="header">
+  <div class="wrap header-in">
+    <button type="button" class="icon-btn menu-btn btn" aria-label="Open menu" id="openMenu">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#4B3A2E" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 8h16M4 16h11"/></svg>
+    </button>
+    <a href="#" class="logo"><img src="assets/logo2_wordmark.png" alt="Terra Collective"></a>
+    <nav aria-label="Main" class="main-nav">
+      <a href="#shop">Shop the rack</a>
+      <a href="#consign">Consign with us</a>
+      <a href="#showroom">Showroom</a>
+      <a href="#story">Our story</a>
+    </nav>
+    <button type="button" class="icon-btn btn bag" aria-label="Bag">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4B3A2E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h14l-1 12H6L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+      <span class="bag-count" id="bagCount" hidden>0</span>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile menu -->
+<div class="drawer" id="drawer" hidden>
+  <div class="drawer-panel">
+    <div class="drawer-top">
+      <img src="assets/logo2_wordmark.png" alt="Terra Collective">
+      <button type="button" class="icon-btn btn" aria-label="Close menu" data-close>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#4B3A2E" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <nav aria-label="Menu">
+      <a href="#shop" data-close>Shop the rack</a>
+      <a href="#consign" data-close>Consign with us</a>
+      <a href="#showroom" data-close>Showroom</a>
+      <a href="#story" data-close>Our story</a>
+    </nav>
+  </div>
+  <button type="button" class="drawer-scrim" aria-label="Close menu" data-close></button>
+</div>
+
+<main>
+<!-- ============ FITTING ROOM ============ -->
+<section class="fitting" aria-label="Virtual fitting room">
+  <div class="fitting-in">
+
+    <div class="fit-intro">
+      <div class="kicker"><span class="dot olive" aria-hidden="true"></span>Virtual fitting room</div>
+      <h1>Every piece has a story. <i>Yours next.</i></h1>
+    </div>
+
+    <div class="stage">
+      <img class="look under" id="lookUnder" alt="">
+      <img class="look over" id="lookOver" alt="">
+      <div class="scan" id="scan" aria-hidden="true"><div class="glow"></div><div class="line"></div></div>
+      <span role="img" class="look-label" id="lookLabel"></span>
+
+      <div class="toggle" role="group" aria-label="Who is trying it on">
+        <button type="button" class="btn on" id="useModel" aria-pressed="true">Model</button>
+        <button type="button" class="btn" id="useYou" aria-pressed="false">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#4B3A2E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l2-2h6l2 2h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>You</button>
+      </div>
+
+      <div class="tools">
+        <button type="button" class="btn tool reset" aria-label="Back to basics" id="reset">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F5EFE7" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6a2 2 0 1 1 2 2c-1 0-2 .7-2 1.6V10L3 16.5c-.8.6-.4 1.5.5 1.5h17c.9 0 1.3-.9.5-1.5L12 10"/></svg>
+        </button>
+        <button type="button" class="btn tool" aria-label="Save this piece" aria-pressed="false" id="favSel">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4B3A2E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg>
+        </button>
+        <button type="button" class="btn tool" aria-label="Share this look" id="share">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4B3A2E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V4M8 8l4-4 4 4M5 13v6h14v-6"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="picker">
+      <nav aria-label="Categories" class="cats" id="cats"></nav>
+      <div class="rail-row">
+        <button type="button" class="btn arrow" aria-label="Previous piece" id="prev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4B3A2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></button>
+        <div class="rail" id="rail"></div>
+        <button type="button" class="btn arrow" aria-label="Next piece" id="next"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4B3A2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button>
+      </div>
+
+      <div class="sheet">
+        <div class="sheet-head">
+          <img id="selThumb" alt="">
+          <div class="sheet-txt">
+            <div class="brand" id="selBrand"></div>
+            <div class="name" id="selName"></div>
+            <div class="detail" id="selDetail"></div>
+          </div>
+          <div class="price" id="selPrice"></div>
+        </div>
+        <div class="in-look"><span class="dot olive" aria-hidden="true"></span><span id="inLook"></span></div>
+        <div class="buy">
+          <div class="sizes" role="group" aria-label="Size" id="sizes"></div>
+          <button type="button" class="btn primary" id="addToBag">Add to bag</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<div class="wave" aria-hidden="true"></div>
+
+<!-- ============ VALUE STRIP ============ -->
+<section class="values wrap">
+  <div class="value">
+    <span class="badge olive" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F5EFE7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><path d="M8.5 12.5l2.3 2.3 4.7-5"/></svg></span>
+    <div><h3>Checked one by one</h3><p>Every piece passes all our criteria before it reaches the rack.</p></div>
+  </div>
+  <div class="value">
+    <span class="badge terra" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F5EFE7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18M12 3v18"/><circle cx="12" cy="12" r="8"/></svg></span>
+    <div><h3>50/50 when it sells</h3><p>Consignors get half of every sale, paid on the 5th of the following month.</p></div>
+  </div>
+  <div class="value">
+    <span class="badge olive" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F5EFE7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 1 0 2.3-5.6"/><path d="M4 4v4h4"/></svg></span>
+    <div><h3>Pass it on</h3><p>Pre-loved pieces from Adelaide wardrobes, ready for another chapter.</p></div>
+  </div>
+</section>
+
+<!-- ============ NEW ON THE RACK ============ -->
+<section id="shop" class="shop wrap">
+  <div class="eyebrow"><span class="star terra" aria-hidden="true">✧</span>New on the rack</div>
+  <h2>Find yours, in your size</h2>
+  <div class="grid" id="grid"></div>
+</section>
+
+<!-- ============ LABELS ============ -->
+<section class="labels wrap">
+  <div class="eyebrow"><span class="star olive" aria-hidden="true">✧</span>Labels you'll find on the rack</div>
+  <div class="chips">
+    <span class="c1">Aje</span><span class="c2">Gorman</span><span class="c1">Country Road</span><span class="c3">Camilla and Marc</span>
+    <span class="c2">Assembly Label</span><span class="c1">Zimmermann</span><span class="c3">Alemais</span><span class="c2">Genuine vintage</span>
+  </div>
+</section>
+
+<!-- ============ CONSIGN ============ -->
+<section id="consign" class="consign">
+  <svg class="consign-deco" width="380" height="160" viewBox="0 0 300 130" fill="none" aria-hidden="true"><path d="M0 30c40-28 80-28 120 0s80 28 140 0" stroke="#8A8F72" stroke-width="14" stroke-linecap="round"/><path d="M0 72c40-28 80-28 120 0s80 28 140 0" stroke="#8A8F72" stroke-width="14" stroke-linecap="round"/><path d="M0 112c40-28 80-28 120 0s80 28 140 0" stroke="#B76E4E" stroke-width="8" stroke-linecap="round"/></svg>
+  <div class="wrap consign-in">
+    <div>
+      <div class="eyebrow light">Consign with us</div>
+      <h2>Your wardrobe has stories. Let's pass one on.</h2>
+      <p class="lead">We handle the photos, pricing and selling. You get 50% when a piece sells.</p>
+      <div class="terms">
+        <span class="o">8 to 12 weeks on the rack</span>
+        <span class="t">20% off from week 4</span>
+        <span class="o">Unsold: collect it or we donate it</span>
+      </div>
+      <div class="cta-row">
+        <a href="#consign" class="cta">Apply to consign</a>
+        <a href="#consign" class="link-light">Read the consignment policies</a>
+      </div>
+    </div>
+    <ol class="steps">
+      <li><span class="num terra" aria-hidden="true">1</span><span><b>Send us a few photos</b><br>On Instagram or WhatsApp, for a quick pre-check.</span></li>
+      <li><span class="num olive" aria-hidden="true">2</span><span><b>Book your drop-off</b><br>Bring 10 to 15 pieces, freshly washed, and we'll go through them together.</span></li>
+      <li><span class="num olive" aria-hidden="true">3</span><span><b>We curate, photograph and price</b><br>Before a piece goes on the rack, you'll know its price and exactly what you'd receive.</span></li>
+      <li><span class="num terra" aria-hidden="true">4</span><span><b>Get paid on the 5th</b><br>Of the following month, with a list of what sold.</span></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ SHOWROOM + STORY ============ -->
+<section class="wrap duo">
+  <div id="showroom" class="showroom">
+    <div class="showroom-band" aria-hidden="true"><span class="sun"></span></div>
+    <div class="showroom-body">
+      <div class="eyebrow dark">Next showroom</div>
+      <h2 id="showWhen"></h2>
+      <p>A rack of pre-loved pieces we've checked one by one, good music, and time to try things on properly.</p>
+      <p class="venue" id="showWhere"></p>
+      <a href="#showroom" class="cta dark">Save the date</a>
+    </div>
+  </div>
+  <div id="story" class="story">
+    <div class="story-mark"><img src="assets/logo2_isotipo.png" alt=""><span aria-hidden="true"></span></div>
+    <p class="quote">The most beautiful piece in your wardrobe might be the one that's already hanging there.</p>
+    <p>Terra Collective is curated consignment in Adelaide, started by Lina and Maria Paula. Every piece has a story. Yours next.</p>
+  </div>
+</section>
+
+<!-- ============ NEWSLETTER ============ -->
+<!-- Hidden until the form is connected to a mailing tool: today it saves nothing (decided 24 Nov 2026). -->
+<section class="wrap" style="display:none" aria-hidden="true">
+  <div class="newsletter">
+    <div>
+      <h2>Join the collective</h2>
+      <p>Showroom dates and new pieces, straight to your inbox.</p>
+    </div>
+    <form id="subscribe" novalidate>
+      <label for="email">Email</label>
+      <div class="field">
+        <input id="email" type="email" placeholder="you@example.com" autocomplete="email">
+        <button type="submit" class="btn primary">Subscribe</button>
+      </div>
+    </form>
+  </div>
+</section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-foot">
+  <div class="wrap foot-in">
+    <div>
+      <img src="assets/logo2_wordmark_sand.png" alt="Terra Collective">
+      <p>Every piece has a story. Yours next.</p>
+      <p class="small">@terracollective · Adelaide, South Australia</p>
+    </div>
+    <nav aria-label="Footer">
+      <a href="#shop">Shop the rack</a>
+      <a href="#consign">How to consign</a>
+      <a href="#showroom">Showroom</a>
+      <a href="#consign">Consignment policies</a>
+      <a href="#story">Our story</a>
+      <a href="#story">FAQ</a>
+    </nav>
+  </div>
+  <div class="wave foot" aria-hidden="true"></div>
+</footer>
+
+<div class="toast" role="status" id="toast"></div>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
